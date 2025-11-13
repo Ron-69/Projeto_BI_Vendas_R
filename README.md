@@ -36,19 +36,27 @@ Os resultados foram visualizados em três gráficos principais que formam o núc
 * **Gráfico:** Linha mostrando a Vendas Totais por `Mes_Ano`.
 * **Insight:** Claramente visível a forte **sazonalidade** da empresa, com picos de vendas concentrados no final de cada ano (Q4 - Outubro, Novembro, Dezembro), indicando dependência de períodos promocionais.
 
+**Visualização:** ![Série Temporal de Vendas Mensais](assets/VendasTotaisPorAno.png)
+
 ### 2. Vendas por Categoria
 
 * **Gráfico:** Barras Horizontais (`geom_col` + `coord_flip`) mostrando o total de `Sales` por `Category`.
 * **Insight:** A categoria **Technology** (Tecnologia) e **Furniture** (Móveis) são as maiores geradoras de receita. A estratégia de vendas e estoque deve priorizar esses segmentos.
+
+**Visualização:**
+![Gráfico de Barras de Vendas por Categoria](assets/VendasTotaisPorCategoria.png)
 
 ### 3. Vendas por Região
 
 * **Gráfico:** Barras mostrando o total de `Sales` por `Region`.
 * **Insight:** [**INSIRA AQUI a sua Região com as Vendas Mais Altas**]. Esta análise orienta onde os investimentos em marketing ou logística devem ser concentrados para maximizar o retorno.
 
+**Visualização:**
+![Gráfico de Barras de Vendas por Região](assets/VendasTotaisPorRegiao.png)
+
 ## 📌 Como Reproduzir
 
-1.  Clone este repositório: `git clone [SEU LINK DO REPO]`
+1.  Clone este repositório: `git remote add origin https://github.com/Ron-69/Projeto_BI_Vendas_R.git
 2.  Abra o arquivo `Projeto_BI_Vendas_R.Rproj` no **RStudio**.
 3.  Instale os pacotes necessários no console: `install.packages(c("tidyverse", "lubridate", "scales"))`
 4.  Execute o script `analise_vendas.R` em blocos para replicar a análise e gerar os gráficos.

@@ -112,3 +112,25 @@ plot_vendas_categoria <- df_categoria %>%
 # Exibe o gráfico
 print(plot_vendas_categoria)
 
+
+# Agregação e Visualização por Região
+
+df_regiao <- df_vendas %>% group_by(Region) %>% summarise( Vendas_Totais = sum(Sales) ) %>%
+  
+arrange(desc(Vendas_Totais))
+
+plot_vendas_regiao <- df_regiao %>% ggplot(aes(x = reorder(Region, Vendas_Totais), y = Vendas_Totais, fill = Region)) +
+  
+geom_col() +
+  
+coord_flip() +
+  
+labs( title = "Vendas Totais por Região de Atuação", x = "Região", y = "Vendas Totais" ) +
+  
+scale_y_continuous(labels = scales::dollar_format(prefix = "R$", big.mark = ".", decimal.mark = ",")) +
+  
+theme_minimal() +
+  
+theme(legend.position = "none")
+
+print(plot_vendas_regiao)
